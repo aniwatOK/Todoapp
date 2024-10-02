@@ -13,31 +13,31 @@
   </head>
   <body>
     <script>
-       function addTodo() {
-          const inputValue = document.getElementById("input").value;
+      function addTodo() {
+        const inputValue = document.getElementById("input").value;
         
-         if (inputValue.trim() === "") return;
+        if (inputValue.trim() === "") return;
         
-         let newElement = document.createElement("li");
-         newElement.classList.add("list-group-item", "d-flex", "justify-content-between", "align-items-center");
+        let newElement = document.createElement("li");
+        newElement.classList.add("list-group-item", "d-flex", "justify-content-between", "align-items-center");
         
-         let newTxtElement = document.createTextNode(inputValue);
-         newElement.appendChild(newTxtElement);
+        let newTxtElement = document.createTextNode(inputValue);
+        newElement.appendChild(newTxtElement);
         
-         let deleteButton = document.createElement("button");
-         deleteButton.classList.add("btn", "btn-danger", "btn-sm");
-         deleteButton.textContent = "X";
-         deleteButton.onclick = function () {
-         newElement.remove();
-         };
+        let deleteButton = document.createElement("button");
+        deleteButton.classList.add("btn", "btn-danger", "btn-sm");
+        deleteButton.textContent = "X";
+        deleteButton.onclick = function () {
+          newElement.remove();
+        };
         
-         newElement.appendChild(deleteButton);
+        newElement.appendChild(deleteButton);
         
-         let listElement = document.getElementById("listtodo");
-         listElement.appendChild(newElement);
+        let listElement = document.getElementById("listtodo");
+        listElement.appendChild(newElement);
         
-         document.getElementById("input").value = "";
-        }
+        document.getElementById("input").value = "";
+      }
     </script>
       
     <div class="container">
@@ -57,7 +57,7 @@
               class="btn btn-primary"
               type="button"
               id="button-add"
-              onclick="addtodo()"
+              onclick="addTodo()"
             >
               +
             </button>
